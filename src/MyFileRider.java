@@ -2,15 +2,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
-
 public class MyFileRider extends Main {
-    static String set;
-    static char[] charsArrayAfterRead = new char[100];
-
+    private static final int buferValue = 100;
+    static char[] charsArrayAfterRead = new char[buferValue];
     public static char[] readFile(File pathScanner) throws FileNotFoundException {
-
-
         try (FileReader reader = new FileReader(PathCheck.file)) {
             reader.read(charsArrayAfterRead);
             System.out.println(charsArrayAfterRead);
