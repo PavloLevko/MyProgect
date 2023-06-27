@@ -8,8 +8,9 @@ public class UserMenu  extends Main {
             "3 - encrypted shift by 6 characters.\n" +
             "4 - decrypted the text 3 characters.\n"+
             "5 - decrypted the text 3 characters.\n" +
-           "0 - BruteForce";
-    private static final String EXIT ="Press 5 to exit.";
+           "0 - BruteForce.\n" +
+           "Press Enter to exit.";
+    public static final String BRUTE_FORCE_INFO = "You select Brute Force.";
     private static final String START_METOD = "Please enter the file path.";
     public static boolean isRaning = true;
     public static String  pathScanner;
@@ -42,10 +43,17 @@ public class UserMenu  extends Main {
                         break;
                     }
                     case "0" -> {
-
-                        // BruteForce
+                        System.out.println(BRUTE_FORCE_INFO);
+                        System.out.println(START_METOD);
+                        pathScanner = scan.nextLine();
+                        PathCheck.checkedPath(pathScanner);
+                        BruteForce.bruteForse(MyFileRider.charsArrayAfterRead);
+                        BruteForce.selectDecryptMetod(BruteForce.valueSpaceThree, BruteForce.valueSpaceSix);
                     }
-                    default -> System.out.println("Program is finish.");
+                    default -> {
+                        System.out.println("Program is finish.");
+                        return;
+                    }
                 }
             }
         }
