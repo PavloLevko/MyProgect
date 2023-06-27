@@ -5,6 +5,7 @@ public class BruteForce {
     private static final char SPACE_SIX = '&';
     public static int valueSpaceThree =0;
     public static int valueSpaceSix =0;
+    private static final int COEFFICIENT = 3;
     public static void bruteForse (char[] array) {
         array = MyFileRider.charsArrayAfterRead;
         for (int i = 0; i < array.length; i++) {
@@ -17,9 +18,9 @@ public class BruteForce {
         System.out.println(valueSpaceThree);
     }
     public static void selectDecryptMetod( int valueSpaceThree, int valueSpaceSix){
-        if (valueSpaceThree>3){
+        if (valueSpaceThree>COEFFICIENT){
             DecryptThree.decryptedToThree(MyFileRider.charsArrayAfterRead);
-        }else if(valueSpaceSix>3) {
+        }else if(valueSpaceSix>COEFFICIENT) {
             DecryptSix.decryptedToSix(MyFileRider.charsArrayAfterRead);
         }else{
             System.out.println(MASSAGE);
