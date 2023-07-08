@@ -18,9 +18,3 @@ public class MyFileRider extends Main {
         return charsArrayAfterRead;
     }
 }
-
-
-
-
-
-

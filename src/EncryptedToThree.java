@@ -13,9 +13,3 @@ public class EncryptedToThree extends MyFileRider {
         System.out.println(AFTER_ENCRYPTED);
     }
 }
-
-
-
-
-
-

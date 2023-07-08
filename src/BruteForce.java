@@ -20,15 +20,12 @@ public class BruteForce {
     public static void selectDecryptMetod( int valueSpaceThree, int valueSpaceSix){
         if (valueSpaceThree>COEFFICIENT){
             DecryptThree.decryptedToThree(MyFileRider.charsArrayAfterRead);
+            System.out.println(BRUTE_FORCE_COMPLITE);
         }else if(valueSpaceSix>COEFFICIENT) {
             DecryptSix.decryptedToSix(MyFileRider.charsArrayAfterRead);
+            System.out.println(BRUTE_FORCE_COMPLITE);
         }else{
             System.out.println(MASSAGE);
         }
     }
-
-
-
-
-
 }

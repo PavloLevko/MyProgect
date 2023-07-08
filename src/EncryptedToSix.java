@@ -13,5 +13,3 @@ public class EncryptedToSix  {
         System.out.println(AFTER_ENCRYPTED);
     }
 }
-
-
