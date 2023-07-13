@@ -3,7 +3,7 @@ public class EncryptedToThree extends MyFileRider {
     private static final int numberThree = 3;
     private static final int buferValue = 100;
     static char[] arrayAfterEncrypted = new char[buferValue];
-    public static void encryptedToThree(char[] array) {
+    public void encryptedToThree(char[] array) {
         for (int i = 0; i < array.length; i++) {
             char charFromArray = array[i];
             int codeChar = charFromArray + numberThree;

@@ -3,7 +3,7 @@ public class DecryptSix extends MyFileRider {
     private static final int numberSix = 6;
     private static final int buferValue = 100;
     static char[] arrayAfterDecrypted = new char[buferValue];
-    public static void decryptedToSix(char[] array) {
+    public void decryptedToSix(char[] array) {
         for (int i = 0; i < array.length; i++) {
             char charFromArray = array[i];
             int codeChar = charFromArray - numberSix;

@@ -24,12 +24,14 @@ public class BruteForce {
         }
         System.out.println(valueSpaceThree);
     }
+    DecryptSix decryptSix = new DecryptSix();
     public void selectDecryptMetod( int valueSpaceThree, int valueSpaceSix){
         if (valueSpaceThree>COEFFICIENT){
-            DecryptThree.decryptedToThree(MyFileRider.charsArrayAfterRead);
+            DecryptThree decryptThree = new DecryptThree();
+            decryptThree.decryptedToThree(MyFileRider.charsArrayAfterRead);
             System.out.println(BRUTE_FORCE_COMPLITE);
         }else if(valueSpaceSix>COEFFICIENT) {
-            DecryptSix.decryptedToSix(MyFileRider.charsArrayAfterRead);
+            decryptSix.decryptedToSix(MyFileRider.charsArrayAfterRead);
             System.out.println(BRUTE_FORCE_COMPLITE);
         }else{
             System.out.println(MASSAGE);

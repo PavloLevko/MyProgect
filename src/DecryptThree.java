@@ -4,7 +4,8 @@ public class DecryptThree extends MyFileRider {
     private static final int buferValue = 100;
     static char[] arrayAfterDecrypted = new char[buferValue];
     private static final int key = 1;
-    public static void decryptedToThree(char[] array) {
+
+    public void decryptedToThree(char[] array) {
         for (int i = 0; i < array.length; i++) {
             char charFromArray = array[i];
             int codeChar = charFromArray - numberThree;

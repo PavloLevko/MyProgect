@@ -5,7 +5,7 @@ import java.io.IOException;
 public class MyFileRider extends Main {
     private static final int buferValue = 100;
     static char[] charsArrayAfterRead = new char[buferValue];
-    public static char[] readFile(File pathScanner) throws FileNotFoundException {
+    public char[] readFile(File pathScanner) throws FileNotFoundException {
         try (FileReader reader = new FileReader(PathCheck.file)) {
             reader.read(charsArrayAfterRead);
             System.out.println(charsArrayAfterRead);

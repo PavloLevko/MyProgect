@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class UserMenu  extends Main {
@@ -29,32 +30,39 @@ public class UserMenu  extends Main {
                     case USER_INPUT_PATH -> {
                         System.out.println(START_METOD);
                         pathScanner = scan.nextLine();
-                        PathCheck.checkedPath(pathScanner);
+                        PathCheck pathCheck = new PathCheck();
+                        pathCheck.checkedPath(pathScanner);
                         break;
                     }
                     case USER_INPUT_ENCRYPTED_TO_THREE -> {
-                        EncryptedToThree.encryptedToThree(MyFileRider.charsArrayAfterRead);
+                        EncryptedToThree encryptedToThree = new EncryptedToThree();
+                        encryptedToThree.encryptedToThree(MyFileRider.charsArrayAfterRead);
                         break;
                     }
                     case USER_INPUT_ENCRYPTED_TO_SIX -> {
-                        EncryptedToSix.encryptedToSix(MyFileRider.charsArrayAfterRead);
+                        EncryptedToSix encryptedToSix = new EncryptedToSix();
+                        encryptedToSix.encryptedToSix(MyFileRider.charsArrayAfterRead);
                         break;
                     }
                     case USER_INPUT_DECRYPTED_TO_THREE -> {
-                        DecryptThree.decryptedToThree(EncryptedToThree.arrayAfterEncrypted);
+                        DecryptThree decryptThree = new DecryptThree();
+                        decryptThree.decryptedToThree(EncryptedToThree.arrayAfterEncrypted);
                         break;
                     }
                     case USER_INPUT_DECRYPTED_TO_SIX -> {
-                        DecryptSix.decryptedToSix(EncryptedToSix.arrayAfterEncrypted);
+                        DecryptSix decryptSix = new DecryptSix();
+                        decryptSix.decryptedToSix(EncryptedToSix.arrayAfterEncrypted);
                         break;
                     }
                     case USER_INPUT_BRUTE_FORCE -> {
+                        PathCheck pathCheck = new PathCheck();
+                        BruteForce bruteForce = new BruteForce();
                         System.out.println(BRUTE_FORCE_INFO);
                         System.out.println(START_METOD);
                         pathScanner = scan.nextLine();
-                        PathCheck.checkedPath(pathScanner);
-                        BruteForce.bruteForse(MyFileRider.charsArrayAfterRead);
-                        BruteForce.selectDecryptMetod(BruteForce.valueSpaceThree, BruteForce.valueSpaceSix);
+                        pathCheck.checkedPath(pathScanner);
+                        bruteForce.bruteForse(MyFileRider.charsArrayAfterRead);
+                        bruteForce.selectDecryptMetod(BruteForce.getValueSpaceThree(),BruteForce.getValueSpaceSix());
                     }
                     default -> {
                         System.out.println("Program is finish.");

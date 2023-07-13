@@ -3,7 +3,7 @@ public class EncryptedToSix  {
     private static final int numberSix = 6;
     private static final int buferValue = 100;
     static char[] arrayAfterEncrypted = new char[buferValue];
-    public static void encryptedToSix(char[] array) {
+    public void encryptedToSix(char[] array) {
         for (int i = 0; i < array.length; i++) {
             char charFromArray = array[i];
             int codeChar = charFromArray + numberSix;
