@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-public class UserMenu  extends Main {
+public class UserMenu {
     private static final String USER_INPUT_PATH = "1";
     private static final String USER_INPUT_ENCRYPTED_TO_THREE = "2";
     private static final String USER_INPUT_ENCRYPTED_TO_SIX = "3";
